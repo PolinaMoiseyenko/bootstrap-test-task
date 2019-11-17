@@ -1,0 +1,294 @@
+// Bootstrap variables
+
+$input-focus-bg: #354252;
+$input-placeholder-color: #d0d5dc;
+$input-focus-box-shadow: none;
+$input-color: #f4ffff;
+$btn-focus-box-shadow: none;
+$body-bg: #344c68;
+$card-bg: #65768b;
+$card-border-width: 0;
+$link-color: #5baff7;
+$link-hover-decoration: none;
+
+
+// Custom variables 
+
+$nav-item-hover-color: #354a64;
+$nav-item-selected: #334861;
+$header-bottom-margin: 40px;
+$body-color: #f4ffff;
+$header-btn-color: #8794a4;
+
+$btn-default: #666666;
+$btn-primary: #4f87ba;
+$btn-info: #51bfbb;
+$btn-success: #5ab85d;
+$btn-warning: #efad2c;
+$btn-danger: #da471e;
+$btn-inverse: #f8f8f8;
+
+@import "../bootstrap/scss/bootstrap";
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $body-color;
+    font-size: 0.8rem;
+}
+
+button {
+    border: none;
+    background-color: $body-bg;
+}
+
+.button-group {
+    border-right: 2px solid;
+    border-image: 
+    linear-gradient(
+      to bottom, 
+      $body-bg,
+      #354252, 
+      $body-bg
+    ) 1 100%;
+}
+
+.navbar {
+    .btn {
+        padding: 8px;
+    }
+
+    i:hover {
+        color: lighten($header-btn-color, 20%);
+    }
+
+    i {
+        font-size: 1.3rem;
+        color: $header-btn-color;
+    }
+}
+
+.search-pane {
+    i {
+        font-size: 0.9rem;
+    }
+
+    .search-input {
+        width: 200px;
+        background-color: #354252;
+        border: none;
+        font-size: 0.7rem;
+        transition: width 0.3s ease-in;
+        -webkit-transition: width 0.3s ease-in;
+    }
+
+    .search-input:hover {
+        width: 230px;
+    }
+
+    .search-btn {    
+        background-color: #354252;
+        color: #d0d5dc;
+    }
+}
+
+.logo {
+    color: $body-color;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: $header-bottom-margin;
+} 
+
+.logo:hover {
+    color: $body-color;
+}
+
+.navbar {
+    margin-bottom: $header-bottom-margin;
+}
+
+.nav-item {
+    padding: 10px 20px 10px 30px;
+    border-radius: 8px;
+
+    i {
+        width: 10px;
+        margin-right: 10px;
+    }
+}
+
+.sub-nav .nav-item {
+    padding: 4px 20px 4px 60px;
+}
+
+.nav-item:hover {
+    background-color: $nav-item-hover-color;
+}
+
+.nav-item-selected {
+    font-weight: bold;
+}
+
+.main-nav-item-selected {
+    @extend .nav-item-selected;
+    background-color: $nav-item-selected;
+}
+
+
+@mixin font-awesome($content){
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-style: normal;
+    text-decoration: inherit;
+    content: $content;
+}
+
+@mixin nav-font-awesome($content) {
+   @include font-awesome($content);
+   float: right;
+   margin-left: 10px;
+}
+
+.main-nav-item-selected::after {
+   @include nav-font-awesome("\f107");
+}
+
+.nav-item-dropdown::after {
+    @include nav-font-awesome("\f104");
+}
+
+.nav-item-plus::after {     
+    @include nav-font-awesome("\f067");
+}
+
+@mixin circle-label($color) {
+    @include font-awesome("\f111");
+    font-size: 0.6rem;
+    vertical-align: middle;
+    color: $color;
+    margin-right: 10px;
+}
+
+.label-recent::before {
+   @include circle-label(#efad2c)
+}
+
+.label-starred::before {
+    @include circle-label(#666666)
+ }
+ 
+.label-background::before {
+    @include circle-label(#da471e)
+}
+
+.content-section {
+    margin-bottom: 40px;
+}
+
+.inner-card {
+    background-color: #566170;
+}
+
+.outer-card {
+    width: 47%;
+}
+
+.content-section {
+    margin-bottom: 40px;
+}
+
+.header {
+    font-size: 1.7rem;
+    font-weight: 200;
+    
+    i {
+        color: inherit;
+        vertical-align: middle;
+    }
+}
+.sub-header {
+    font-size: 1rem;
+}
+
+@mixin button-color($bg-color) {
+    background-color: $bg-color;
+    border-width: 1.5px;    
+    border-color: darken($bg-color, 10%);
+}
+
+.card {
+    .header {
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        vertical-align: bottom;
+    }
+    .sub-header {
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+    i {
+        font-size: 0.7rem;
+    }
+
+    .btn {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.8rem;
+        color: $body-color;
+        border-radius: 0.2rem;
+    }
+    
+    .btn-default {
+        @include button-color($btn-default);
+    }
+    .btn-primary {
+        @include button-color($btn-primary);
+    }
+    .btn-info {
+        @include button-color($btn-info);
+    }
+    .btn-success {
+        @include button-color($btn-success);
+    }
+    .btn-warning {
+        @include button-color($btn-warning);
+    }
+    .btn-danger {
+        @include button-color($btn-danger);
+    }
+    .btn-inverse {
+        @include button-color($btn-inverse);
+        color: #606060;
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+}
+
+.labeled {
+    position: relative;
+
+    .badge {
+       position: absolute;
+        font-size: 0.6rem;
+        top: 1rem;
+        right: 0.2rem;
+        font-weight: 400;
+        background-color: #00000036;
+        border-radius: 100%;
+    }
+}
+
+.nav {
+    .badge {
+        position: relative;
+        bottom: 0.3rem;
+        right: 0.2rem;
+        color: #eda939;
+        font-size: 0.7rem;
+    }
+}
+
