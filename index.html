@@ -17,97 +17,129 @@
 </head>
 
 <body>
+  <div class="wrapper d-flex mx-3">
+    <nav class="nav flex-column float-left">
+      <span class="logo">Light <span class="font-weight-bold">Blue</span></span>
+      <li class="nav-item">
+        <i class="fas fa-home"></i>
+        <span>Dashboard</span>
+      </li>
+      <li class="nav-item">
+        <i class="fas fa-database"></i>
+        <span>LB Package
+          <span class="badge">4.0</span>
+        </span>
+      </li>
+      <li class="nav-item nav-item-dropdown">
+        <i class="fas fa-pen"></i>
+        <span>Forms</span>
+      </li>
+      <li class="nav-item nav-item-dropdown">
+        <i class="fas fa-chart-area"></i>
+        <span>Statistics</span>
+      </li>
+      <li class="nav-item main-nav-item-selected">
+        <i class="fas fa-magic"></i>
+        <span>User interface</span>
+      </li>
+      <ul class="nav flex-column sub-nav">
+        <li class="nav-item nav-item-selected">Buttons</li>
+        <li class="nav-item">Dialogs</li>
+        <li class="nav-item">Notifications</li>
+        <li class="nav-item">Icons</li>
+        <li class="nav-item">Tabs</li>
+        <li class="nav-item">Accordion</li>
+      </ul>
+      <li class="nav-item nav-item-dropdown">
+        <i class="fas fa-tree"></i>
+        <span>Components</span>
+      </li>
+      <li class="nav-item nav-item-dropdown">
+        <i class="fas fa-cog"></i>
+        <span>Tables</span>
+      </li>
+      <li class="nav-item nav-item-dropdown">
+        <i class="fas fa-th"></i>
+        <span>Widgets</span>
+      </li>
+      <li class="nav-item nav-item-dropdown">
+        <i class="fas fa-leaf"></i>
+        <span>Special</span>
+      </li>
+      <li class="nav-item nav-item-dropdown">
+        <i class="fas fa-folder-open"></i>
+        <span>Menu levels</span>
+      </li>
 
+      <li class="nav-item nav-item-plus">
+        <span>Labels</span>
+      </li>
+      <li class="nav-item label label-recent">
+        <span>My Recent</span>
+      </li>
+      <li class="nav-item label label-starred">
+        <span>Starred</span>
+      </li>
+      <li class="nav-item label label-background">
+        <span>Background</span>
+      </li>
+    </nav>
 
-  <nav class="nav flex-column  float-left">
-    <span class="logo">Light <span class="font-weight-bold">Blue</span></span>
-    <li class="nav-item">
-      <i class="fas fa-home"></i>
-      <span>Dashboard</span>
-    </li>
-    <li class="nav-item">
-      <i class="fas fa-database"></i>
-      <span>LB Package</span>
-    </li>
-    <li class="nav-item nav-item-dropdown">
-      <i class="fas fa-pen"></i>
-      <span>Forms</span>
-    </li>
-    <li class="nav-item nav-item-dropdown">
-      <i class="fas fa-chart-area"></i>
-      <span>Statistics</span>
-    </li>
-    <li class="nav-item main-nav-item-selected">
-      <i class="fas fa-magic"></i>
-      <span>User interface</span>
-    </li>
-    <ul class="nav flex-column sub-nav">
-      <li class="nav-item nav-item-selected">Buttons</li>
-      <li class="nav-item">Dialogs</li>
-      <li class="nav-item">Notifications</li>
-      <li class="nav-item">Icons</li>
-      <li class="nav-item">Tabs</li>
-      <li class="nav-item">Accordion</li>
-    </ul>
-    <li class="nav-item nav-item-dropdown">
-      <i class="fas fa-tree"></i>
-      <span>Components</span>
-    </li>
-    <li class="nav-item nav-item-dropdown">
-      <i class="fas fa-cog"></i>
-      <span>Tables</span>
-    </li>
-    <li class="nav-item nav-item-dropdown">
-      <i class="fas fa-th"></i>
-      <span>Widgets</span>
-    </li>
-    <li class="nav-item nav-item-dropdown">
-      <i class="fas fa-leaf"></i>
-      <span>Special</span>
-    </li>
-    <li class="nav-item nav-item-dropdown">
-      <i class="fas fa-folder-open"></i>
-      <span>Menu levels</span>
-    </li>
+    <section class="flex-fill ml-4">
+      <header class="navbar d-flex justify-content-end">
+        <form class="form-inline header-form">
+          <div class="search-pane input-group">
+            <button class="search-btn btn input-group-prepend"><i class="fas fa-search" aria-hidden="true"></i></button>
+            <input class="form-control search-input" type="text" placeholder="Search..." aria-label="Search">
+          </div>
+          <div class="button-group px-3">
+            <button class="btn"><i class="fas fa-comment-alt header-icon"></i></button>
+            <button class="btn">
+              <i class="fas fa-globe-americas header-icon"></i>
+              <span class="badge">8</span>
+            </button>
+          </div>
+          <div class="px-3">
+            <button class="btn"><i class="fas fa-cog header-icon"></i></button>
+            <button class="btn"><i class="fas fa-user header-icon"></i></button>
+            <button class="btn"><i class="fas fa-power-off header-icon"></i></button>
+          </div>
+        </form>
+      </header>
 
-    <li class="nav-item nav-item-plus">
-      <span>Labels</span>
-    </li>
-    <li class="nav-item label label-recent">
-      <span>My Recent</span>
-    </li>
-    <li class="nav-item label label-starred">
-      <span>Starred</span>
-    </li>
-    <li class="nav-item label label-background">
-      <span>Background</span>
-    </li>
-  </nav>
-
-  <section>
-    <header class="navbar float-right">
-      <form class="form-inline header-form">
-        <div class="search-pane input-group">
-          <button class="search-btn btn input-group-prepend"><i class="fas fa-search" aria-hidden="true"></i></button>
-          <input class="form-control search-input" type="text" placeholder="Search..." aria-label="Search">
+      <section main-section>
+        <h1 class="header">Buttons <span class="sub-header">Buttons, states and more</span></h1>
+        <div class="card outer-card pt-3 pb-4 px-3">
+          <h3 class="card-title header"><i class="fas fa-star"></i>Default buttons <span class="sub-header">classes on
+              hover</span></h3>
+          <div class="card inner-card flex-row my-2 p-3">
+            <div class="col align-self-center d-flex justify-content-center"><button
+                class="btn btn-default">Default</button></div>
+            <div class="col align-self-center d-flex justify-content-center"><button
+                class="btn btn-primary">Primary</button></div>
+            <div class="col align-self-center d-flex justify-content-center"><button class="btn btn-info">Info</button>
+            </div>
+          </div>
+          <div class="card inner-card flex-row my-2 p-3">
+            <div class="col align-self-center d-flex justify-content-center"><button
+                class="btn btn-success">Success</button></div>
+            <div class="col align-self-center d-flex justify-content-center"><button
+                class="btn btn-warning">Warning</button></div>
+            <div class="col align-self-center d-flex justify-content-center"><button
+                class="btn btn-danger">Danger</button></div>
+          </div>
+          <div class="card inner-card flex-row my-2 p-3">
+            <div class="col d-flex justify-content-center"><button class="btn btn-inverse">Inverse</button></div>
+          </div>
         </div>
-        <div class="button-group px-3">
-          <button class="btn"><i class="fas fa-comment-alt header-icon"></i></button>
-          <button class="btn"><i class="fas fa-globe-americas header-icon"></i></button>
-        </div>
-        <div class="px-3">
-          <button class="btn"><i class="fas fa-cog header-icon"></i></button>
-          <button class="btn"><i class="fas fa-user header-icon"></i></button>
-          <button class="btn"><i class="fas fa-power-off header-icon"></i></button>
-        </div>
-      </form>
-    </header>
+        <div class="copyright">Light Blue 4.0 Ajax Version - Made by <a href="https://flatlogic.com">Flatlogic</a></div>
+      </section>
 
-    <!-- <section>
-      <h1>Buttons <span>Buttons, states and more</span></h1>
-    </section> -->
+    </section>
+  </div>
 
-  </section>
+
+
 
 
 

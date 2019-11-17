@@ -6,22 +6,35 @@ $input-focus-box-shadow: none;
 $input-color: #f4ffff;
 $btn-focus-box-shadow: none;
 $body-bg: #344c68;
+$card-bg: #65768b;
+$card-border-width: 0;
 
 // Custom variables 
 
 $nav-item-hover-color: #354a64;
 $nav-item-selected: #334861;
+$header-bottom-margin: 40px;
+$body-color: #f4ffff;
+
+$btn-default: #666666;
+$btn-primary: #4f87ba;
+$btn-info: #51bfbb;
+$btn-success: #5ab85d;
+$btn-warning: #efad2c;
+$btn-danger: #da471e;
+$btn-inverse: #f8f8f8;
+
 
 
 
 @import "../bootstrap/scss/bootstrap";
 
 body {
-    margin: 0 25px;
     font-family: 'Open Sans', sans-serif;
-    color: #f4ffff;
+    color: $body-color;
     font-size: 0.8rem;
 }
+
 
 button {
     border: none;
@@ -65,7 +78,12 @@ i {
     text-align: center;
     font-size: 1.1rem;
     padding: 5px;
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: $header-bottom-margin;
+}
+
+.navbar {
+    margin-bottom: $header-bottom-margin;
 }
 
 .nav-item {
@@ -142,3 +160,80 @@ i {
     @include circle-label(#da471e)
  }
 
+.inner-card {
+    background-color: #566170;
+}
+
+.outer-card {
+    width: 47%;
+}
+
+.main-section {
+    margin-left: 20px;
+}
+
+.header {
+    font-size: 1.7rem;
+    font-weight: 200;
+    
+    i {
+        color: inherit;
+    }
+}
+.sub-header {
+    font-size: 1rem;
+}
+
+@mixin button-color($bg-color) {
+    background-color: $bg-color;
+    border-width: 1.5px;    
+    border-color: darken($bg-color, 10%);
+}
+
+.card {
+    .header {
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+    .sub-header {
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+    i {
+        font-size: 0.7rem;
+    }
+
+    .btn {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.8rem;
+        color: $body-color;
+        border-radius: 0.2rem;
+    }
+    .btn-default {
+        @include button-color($btn-default);
+    }
+    .btn-primary {
+        @include button-color($btn-primary);
+    }
+    .btn-info {
+        @include button-color($btn-info);
+    }
+    .btn-success {
+        @include button-color($btn-success);
+    }
+    .btn-warning {
+        @include button-color($btn-warning);
+    }
+    .btn-danger {
+        @include button-color($btn-danger);
+    }
+    .btn-inverse {
+        @include button-color($btn-inverse);
+        color: #606060;
+    }
+}
+
+.copyright {
+    margin-top: 20vh;
+}

@@ -55,7 +55,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #f4ffff;
   text-align: left;
   background-color: #344c68; }
 
@@ -1189,7 +1189,7 @@ pre {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #212529; }
+  color: #f4ffff; }
   .table th,
   .table td {
     padding: 0.75rem;
@@ -1224,7 +1224,7 @@ pre {
   background-color: rgba(0, 0, 0, 0.05); }
 
 .table-hover tbody tr:hover {
-  color: #212529;
+  color: #f4ffff;
   background-color: rgba(0, 0, 0, 0.075); }
 
 .table-primary,
@@ -1498,7 +1498,7 @@ select.form-control:focus::-ms-value {
   padding-bottom: 0.375rem;
   margin-bottom: 0;
   line-height: 1.5;
-  color: #212529;
+  color: #f4ffff;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0; }
@@ -1797,7 +1797,7 @@ textarea.form-control {
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #212529;
+  color: #f4ffff;
   text-align: center;
   vertical-align: middle;
   user-select: none;
@@ -1812,7 +1812,7 @@ textarea.form-control {
     .btn {
       transition: none; } }
   .btn:hover {
-    color: #212529;
+    color: #f4ffff;
     text-decoration: none; }
   .btn:focus, .btn.focus {
     outline: 0;
@@ -2232,7 +2232,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #212529;
+  color: #f4ffff;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -3243,9 +3243,9 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #65768b;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 0 solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem; }
   .card > hr {
     margin-right: 0;
@@ -3280,18 +3280,18 @@ input[type="button"].btn-block {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  border-bottom: 0 solid rgba(0, 0, 0, 0.125); }
   .card-header:first-child {
-    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
+    border-radius: calc(0.25rem - 0) calc(0.25rem - 0) 0 0; }
   .card-header + .list-group .list-group-item:first-child {
     border-top: 0; }
 
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(0, 0, 0, 0.125); }
+  border-top: 0 solid rgba(0, 0, 0, 0.125); }
   .card-footer:last-child {
-    border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px); }
+    border-radius: 0 0 calc(0.25rem - 0) calc(0.25rem - 0); }
 
 .card-header-tabs {
   margin-right: -0.625rem;
@@ -3313,17 +3313,17 @@ input[type="button"].btn-block {
 
 .card-img {
   width: 100%;
-  border-radius: calc(0.25rem - 1px); }
+  border-radius: calc(0.25rem - 0); }
 
 .card-img-top {
   width: 100%;
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px); }
+  border-top-left-radius: calc(0.25rem - 0);
+  border-top-right-radius: calc(0.25rem - 0); }
 
 .card-img-bottom {
   width: 100%;
-  border-bottom-right-radius: calc(0.25rem - 1px);
-  border-bottom-left-radius: calc(0.25rem - 1px); }
+  border-bottom-right-radius: calc(0.25rem - 0);
+  border-bottom-left-radius: calc(0.25rem - 0); }
 
 .card-deck {
   display: flex;
@@ -3403,7 +3403,7 @@ input[type="button"].btn-block {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
   .accordion > .card .card-header {
-    margin-bottom: -1px; }
+    margin-bottom: 0; }
 
 .breadcrumb {
   display: flex;
@@ -3770,7 +3770,7 @@ input[type="button"].btn-block {
     text-decoration: none;
     background-color: #f8f9fa; }
   .list-group-item-action:active {
-    color: #212529;
+    color: #f4ffff;
     background-color: #e9ecef; }
 
 .list-group-item {
@@ -4381,7 +4381,7 @@ a.close.disabled {
 
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: #212529; }
+  color: #f4ffff; }
 
 .carousel {
   position: relative; }
@@ -7484,7 +7484,7 @@ a.text-dark:hover, a.text-dark:focus {
   color: #121416 !important; }
 
 .text-body {
-  color: #212529 !important; }
+  color: #f4ffff !important; }
 
 .text-muted {
   color: #6c757d !important; }
@@ -7592,7 +7592,6 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 body {
-  margin: 0 25px;
   font-family: 'Open Sans', sans-serif;
   color: #f4ffff;
   font-size: 0.8rem; }
@@ -7623,7 +7622,11 @@ i {
   text-align: center;
   font-size: 1.1rem;
   padding: 5px;
-  margin: 20px 0; }
+  margin-top: 20px;
+  margin-bottom: 40px; }
+
+.navbar {
+  margin-bottom: 40px; }
 
 .nav-item {
   padding: 12px 20px 12px 30px;
@@ -7703,5 +7706,70 @@ i {
   vertical-align: middle;
   color: #da471e;
   margin-right: 10px; }
+
+.inner-card {
+  background-color: #566170; }
+
+.outer-card {
+  width: 47%; }
+
+.main-section {
+  margin-left: 20px; }
+
+.header {
+  font-size: 1.7rem;
+  font-weight: 200; }
+  .header i {
+    color: inherit; }
+
+.sub-header {
+  font-size: 1rem; }
+
+.card .header {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  font-weight: bold; }
+.card .sub-header {
+  font-size: 0.8rem;
+  font-weight: 400; }
+.card i {
+  font-size: 0.7rem; }
+.card .btn {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  color: #f4ffff;
+  border-radius: 0.2rem; }
+.card .btn-default {
+  background-color: #666666;
+  border-width: 1.5px;
+  border-color: #4d4d4d; }
+.card .btn-primary {
+  background-color: #4f87ba;
+  border-width: 1.5px;
+  border-color: #3c6d9a; }
+.card .btn-info {
+  background-color: #51bfbb;
+  border-width: 1.5px;
+  border-color: #3ba29e; }
+.card .btn-success {
+  background-color: #5ab85d;
+  border-width: 1.5px;
+  border-color: #439c46; }
+.card .btn-warning {
+  background-color: #efad2c;
+  border-width: 1.5px;
+  border-color: #d89410; }
+.card .btn-danger {
+  background-color: #da471e;
+  border-width: 1.5px;
+  border-color: #ad3818; }
+.card .btn-inverse {
+  background-color: #f8f8f8;
+  border-width: 1.5px;
+  border-color: #dfdfdf;
+  color: #606060; }
+
+.copyright {
+  margin-top: 20vh; }
 
 /*# sourceMappingURL=style.css.map */
