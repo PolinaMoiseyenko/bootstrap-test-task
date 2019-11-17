@@ -8,6 +8,9 @@ $btn-focus-box-shadow: none;
 $body-bg: #344c68;
 $card-bg: #65768b;
 $card-border-width: 0;
+$link-color: #5baff7;
+$link-hover-decoration: none;
+
 
 // Custom variables 
 
@@ -15,6 +18,7 @@ $nav-item-hover-color: #354a64;
 $nav-item-selected: #334861;
 $header-bottom-margin: 40px;
 $body-color: #f4ffff;
+$header-btn-color: #8794a4;
 
 $btn-default: #666666;
 $btn-primary: #4f87ba;
@@ -23,9 +27,6 @@ $btn-success: #5ab85d;
 $btn-warning: #efad2c;
 $btn-danger: #da471e;
 $btn-inverse: #f8f8f8;
-
-
-
 
 @import "../bootstrap/scss/bootstrap";
 
@@ -38,10 +39,6 @@ body {
 button {
     border: none;
     background-color: $body-bg;
-}
-
-i {
-    color: #8794a4;
 }
 
 .button-group {
@@ -60,8 +57,13 @@ i {
         padding: 8px;
     }
 
+    i:hover {
+        color: lighten($header-btn-color, 20%);
+    }
+
     i {
         font-size: 1.3rem;
+        color: $header-btn-color;
     }
 }
 
@@ -75,6 +77,12 @@ i {
         background-color: #354252;
         border: none;
         font-size: 0.7rem;
+        transition: width 0.3s ease-in;
+        -webkit-transition: width 0.3s ease-in;
+    }
+
+    .search-input:hover {
+        width: 230px;
     }
 
     .search-btn {    
@@ -83,14 +91,17 @@ i {
     }
 }
 
-
-
 .logo {
+    color: $body-color;
     text-align: center;
     font-size: 1rem;
     padding: 5px;
     margin-top: 20px;
     margin-bottom: $header-bottom-margin;
+} 
+
+.logo:hover {
+    color: $body-color;
 }
 
 .navbar {
@@ -98,7 +109,7 @@ i {
 }
 
 .nav-item {
-    padding: 12px 20px 12px 30px;
+    padding: 10px 20px 10px 30px;
     border-radius: 8px;
 
     i {
@@ -108,7 +119,7 @@ i {
 }
 
 .sub-nav .nav-item {
-    padding: 4px 20px 5px 60px;
+    padding: 4px 20px 4px 60px;
 }
 
 .nav-item:hover {
@@ -169,7 +180,11 @@ i {
  
 .label-background::before {
     @include circle-label(#da471e)
- }
+}
+
+.content-section {
+    margin-bottom: 40px;
+}
 
 .inner-card {
     background-color: #566170;
@@ -179,8 +194,8 @@ i {
     width: 47%;
 }
 
-.main-section {
-    margin-left: 20px;
+.content-section {
+    margin-bottom: 40px;
 }
 
 .header {
@@ -189,6 +204,7 @@ i {
     
     i {
         color: inherit;
+        vertical-align: middle;
     }
 }
 .sub-header {
@@ -206,6 +222,7 @@ i {
         margin-bottom: 5px;
         font-size: 0.9rem;
         font-weight: bold;
+        vertical-align: bottom;
     }
     .sub-header {
         font-size: 0.8rem;
@@ -221,6 +238,7 @@ i {
         color: $body-color;
         border-radius: 0.2rem;
     }
+    
     .btn-default {
         @include button-color($btn-default);
     }
@@ -245,8 +263,9 @@ i {
     }
 }
 
-.copyright {
-    margin-top: 20vh;
+.footer {
+    position: absolute;
+    bottom: 20px;
 }
 
 .labeled {
