@@ -1,0 +1,144 @@
+// Bootstrap variables
+
+$input-focus-bg: #354252;
+$input-placeholder-color: #f4ffff;
+$input-focus-box-shadow: none;
+$input-color: #f4ffff;
+$btn-focus-box-shadow: none;
+$body-bg: #344c68;
+
+// Custom variables 
+
+$nav-item-hover-color: #354a64;
+$nav-item-selected: #334861;
+
+
+
+@import "../bootstrap/scss/bootstrap";
+
+body {
+    margin: 0 25px;
+    font-family: 'Open Sans', sans-serif;
+    color: #f4ffff;
+    font-size: 0.8rem;
+}
+
+button {
+    border: none;
+    background-color: $body-bg;
+}
+
+i {
+    color: #8794a4;
+}
+
+.header-icon {
+    color: #d0d5dc;
+}
+
+
+
+.button-group {
+    border-right: 2px solid;
+    border-image: 
+    linear-gradient(
+      to bottom, 
+      $body-bg,
+      #354252, 
+      $body-bg
+    ) 1 100%;
+}
+
+
+
+.search-input {
+    background-color: #354252;
+    border: none;
+}
+
+.search-btn {    
+    background-color: #354252;
+    color: #d0d5dc;
+}
+
+.logo {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 5px;
+    margin: 20px 0;
+}
+
+.nav-item {
+    padding: 12px 20px 12px 30px;
+    border-radius: 8px;
+
+    i {
+        width: 10px;
+        margin-right: 10px;
+    }
+}
+
+.sub-nav .nav-item {
+    padding: 4px 20px 5px 60px;
+}
+
+.nav-item:hover {
+    background-color: $nav-item-hover-color;
+}
+
+.nav-item-selected {
+    font-weight: bold;
+}
+
+.main-nav-item-selected {
+    @extend .nav-item-selected;
+    background-color: $nav-item-selected;
+}
+
+
+@mixin font-awesome($content){
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-style: normal;
+    text-decoration: inherit;
+    content: $content;
+}
+
+@mixin nav-font-awesome($content) {
+   @include font-awesome($content);
+   float: right;
+   margin-left: 10px;
+}
+
+.main-nav-item-selected::after {
+   @include nav-font-awesome("\f107");
+}
+
+.nav-item-dropdown::after {
+    @include nav-font-awesome("\f104");
+}
+
+.nav-item-plus::after {     
+    @include nav-font-awesome("\f067");
+}
+
+@mixin circle-label($color) {
+    @include font-awesome("\f111");
+    font-size: 0.6rem;
+    vertical-align: middle;
+    color: $color;
+    margin-right: 10px;
+}
+
+.label-recent::before {
+   @include circle-label(#efad2c)
+}
+
+.label-starred::before {
+    @include circle-label(#666666)
+ }
+ 
+.label-background::before {
+    @include circle-label(#da471e)
+ }
+
