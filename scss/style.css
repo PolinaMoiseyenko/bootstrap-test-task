@@ -1457,7 +1457,7 @@ pre {
     outline: 0;
     box-shadow: none; }
   .form-control::placeholder {
-    color: #f4ffff;
+    color: #d0d5dc;
     opacity: 1; }
   .form-control:disabled, .form-control[readonly] {
     background-color: #e9ecef;
@@ -7603,24 +7603,29 @@ button {
 i {
   color: #8794a4; }
 
-.header-icon {
-  color: #d0d5dc; }
-
 .button-group {
   border-right: 2px solid;
   border-image: linear-gradient(to bottom, #344c68, #354252, #344c68) 1 100%; }
 
-.search-input {
-  background-color: #354252;
-  border: none; }
+.navbar .btn {
+  padding: 8px; }
+.navbar i {
+  font-size: 1.3rem; }
 
-.search-btn {
+.search-pane i {
+  font-size: 0.9rem; }
+.search-pane .search-input {
+  width: 200px;
+  background-color: #354252;
+  border: none;
+  font-size: 0.7rem; }
+.search-pane .search-btn {
   background-color: #354252;
   color: #d0d5dc; }
 
 .logo {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 5px;
   margin-top: 20px;
   margin-bottom: 40px; }

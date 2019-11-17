@@ -1,7 +1,7 @@
 // Bootstrap variables
 
 $input-focus-bg: #354252;
-$input-placeholder-color: #f4ffff;
+$input-placeholder-color: #d0d5dc;
 $input-focus-box-shadow: none;
 $input-color: #f4ffff;
 $btn-focus-box-shadow: none;
@@ -35,7 +35,6 @@ body {
     font-size: 0.8rem;
 }
 
-
 button {
     border: none;
     background-color: $body-bg;
@@ -44,12 +43,6 @@ button {
 i {
     color: #8794a4;
 }
-
-.header-icon {
-    color: #d0d5dc;
-}
-
-
 
 .button-group {
     border-right: 2px solid;
@@ -62,21 +55,39 @@ i {
     ) 1 100%;
 }
 
+.navbar {
+    .btn {
+        padding: 8px;
+    }
 
-
-.search-input {
-    background-color: #354252;
-    border: none;
+    i {
+        font-size: 1.3rem;
+    }
 }
 
-.search-btn {    
-    background-color: #354252;
-    color: #d0d5dc;
+.search-pane {
+    i {
+        font-size: 0.9rem;
+    }
+
+    .search-input {
+        width: 200px;
+        background-color: #354252;
+        border: none;
+        font-size: 0.7rem;
+    }
+
+    .search-btn {    
+        background-color: #354252;
+        color: #d0d5dc;
+    }
 }
+
+
 
 .logo {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 5px;
     margin-top: 20px;
     margin-bottom: $header-bottom-margin;
