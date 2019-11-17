@@ -237,3 +237,28 @@ i {
 .copyright {
     margin-top: 20vh;
 }
+
+.labeled {
+    position: relative;
+
+    .badge {
+       position: absolute;
+        font-size: 0.6rem;
+        top: 1rem;
+        right: 0.2rem;
+        font-weight: 400;
+        background-color: #00000036;
+        border-radius: 100%;
+    }
+}
+
+.nav {
+    .badge {
+        position: relative;
+        bottom: 0.3rem;
+        right: 0.2rem;
+        color: #eda939;
+        font-size: 0.7rem;
+    }
+}
+
